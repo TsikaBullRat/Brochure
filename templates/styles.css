@@ -1,0 +1,51 @@
+/* Tags */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+}
+
+header, footer, main{
+    width: 100%;
+}
+header{
+    background-color: #e6e6e6;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+}
+main{
+    /* position: absolute; */
+    margin-top: 100px;
+    height: auto;
+    /* top: 0; */
+}
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background-color: #e6e6e6;
+    /* position: absolute; */
+    /* bottom: 0; */
+}
+
+/* Classes */
+.logo{
+    position: fixed;
+    left: 80px;
+    z-index: 3;
+}

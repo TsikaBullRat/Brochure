@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Misc -->
+    <title>Brochure</title>
+
+    <!-- Links -->
+    <link rel="stylesheet" href="styles.css">
+
+
+</head>
+<body>
+
+    <header>
+        <div id="logo">
+            <img src="./src/logo.png" alt="logo">
+            <h2>N.P Ngcakani</h2>
+        </div>
+        <div id="ball1" class="ball"></div>
+        <div id="ball2" class="ball"></div>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1 class="fsizeh1 txt1">Hello World!!!</h1>
+            <p class="fsizep1 txt2">My name is Ntsikayomzi Phenyo Ngcakani, and what you are no seeing is my personal brochure. Please feel free to browse and see the options for services I have available</p>
+        </section>
+        <section id="simple">
+            <div class="split1">
+                <h3 class="fsizeh3 txt1">Single Page</h3>
+                <h3 class="fsizeh3 txt2">R2 500 - R5 000</h3>
+            </div>
+            <div style="width: 100%;">
+                <p class="fsizep1 txt2">Here we have some simple single page web-appliction.</p>
+                <div class="btn-hld1">
+                    <button class="btn1 abtn" onclick="Template(0)">Template 1</button>
+                    <button class="btn1" onclick="Template(1)">Template 2</button>
+                </div>
+                <iframe id="singlepageframe" src="./templates/business/template1.html" width="1000" height="562.5" style="background-color: #fff; margin: 0 auto;"></iframe>
+                <button class="btn2"><a id="link1" href="./templates/business/template1.html">Click me for a better view</a></button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Script -->
+    <script src="script.js"></script>  
+</body>
+</html>
