@@ -16,5 +16,5 @@ const Template = (index) =>{
     for(let i = 0; i < btn1.length; i++){
         btn1[i].setAttribute('class', 'btn1')
     }
-    btn1[index].setAttribute('class', 'btn1 active')
+    btn1[index].setAttribute('class', 'btn1 abtn')
 }

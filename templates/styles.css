@@ -48,4 +48,8 @@ footer{
     position: fixed;
     left: 80px;
     z-index: 3;
+    display: flex;
+}
+.logo i{
+    font-size: 30px;
 }
