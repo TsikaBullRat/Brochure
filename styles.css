@@ -23,6 +23,7 @@ header{
 }
 main{
     width: 100%;
+    position: relative;
 }
 iframe{
     border: none;
@@ -178,5 +179,20 @@ iframe{
     }
     to{
         opacity: 1;
+    }
+}
+
+/* Responsiveness */
+@media screen and (max-width: 480px) {
+    #logo>h2{
+        width: 200px
+    }
+    #about{
+        width: 60%;
+        margin-left: 0;
+        margin: 100px auto;
+    }
+    iframe{
+        width: 300px;
     }
 }
