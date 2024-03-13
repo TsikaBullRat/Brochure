@@ -30,6 +30,26 @@ iframe{
 }
 
 /* Classes */
+.about{
+    background: #ffb319;
+    width: 500px;
+    height: 250px;
+    padding: 50px;
+    color: #fff;
+    border-radius: 25px;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.back{
+    position: fixed;
+    z-index: -1;
+    width: 70vw;
+    opacity: 0.9;
+    left: 100px;
+    top: 50px;
+    filter: blur(6px);
+    animation: blur 3s 1 forwards;
+}
 .btn-hld1{
     width: 250px;
     height: 80px;
@@ -37,7 +57,7 @@ iframe{
     justify-content: space-evenly;
     align-items: center;
 }
-.btn1{
+.btn1, .btn2{
     width: 100px;
     height: 50px;
     display: flex;
@@ -48,9 +68,19 @@ iframe{
     border-radius: 25px;
     cursor: pointer;
     transition: 1.1s;
+}
+.btn1{
     color: #00a19d;
 }
-.abtn{
+.btn2{
+    color: #ffb319;
+}
+.abtn1{
+    background-color: #00a19d;
+    border: solid 2px #fff;
+    color: #fff;
+}
+.abtn2{
     background-color: #ffb319;
     border: solid 2px #fff;
     color: #fff;
@@ -60,7 +90,12 @@ iframe{
     border: solid 2px #fff;
     color: #fff;
 }
-.btn2{
+.btn2:hover{
+    background-color: #ffb319;
+    border: solid 2px #fff;
+    color: #fff;
+}
+.btn3, .btn4{
     width: 150px;
     height: 50px;
     display: flex;
@@ -75,8 +110,11 @@ iframe{
     right: 20px;
     bottom: 20px;
 }
-.btn2>a{
+.btn3>a{
     color: #00a19d;
+}
+.btn4>a{
+    color: #ffb319;
 }
 .ball{
     width: 90px;
@@ -132,26 +170,35 @@ iframe{
     font-weight: 500;
 }
 #about{
-    background: #ffb319;
-    width: 500px;
-    height: 250px;
-    padding: 50px;
-    color: #fff;
-    border-radius: 25px;
-    margin-top: 100px;
-    margin-left: 50px;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -100%;
+    animation: left 1.5s 3s 1 forwards;
 }
-#simple{
-    background: #00a19d;
+#simple1, #simple2{
     width: 80%;
     height: auto;
-    margin-top: 300px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
     padding: 30px;
     color: #fff;
     position: relative;
+}
+#simple1{
+    background: #00a19d;
+    animation: right 1.5s 3s 1 forwards;
+    right: -100%;
+}
+#simple2{
+    background: #ffb319;
+    animation: left 1.5s 3s 1 forwards;
+    left: -100%;
 }
 
 /*Animation*/
@@ -181,18 +228,71 @@ iframe{
         opacity: 1;
     }
 }
+@keyframes blur {
+    from{
+        opacity: 1;
+        filter: blur(0px);
+    }
+    to{
+        opacity: 0.9;
+        filter: blur(6px);
+    }
+}
+@keyframes left {
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0
+    }
+}
+@keyframes right {
+    from{
+        right: -100%;
+    }
+    to{
+        right: 0
+    }
+}
 
 /* Responsiveness */
 @media screen and (max-width: 480px) {
+    body{
+        overflow-x: hidden;
+    }
     #logo>h2{
         width: 200px
     }
-    #about{
-        width: 60%;
+    /* #about{
+        width: 80%;
         margin-left: 0;
         margin: 100px auto;
-    }
+    } */
     iframe{
         width: 300px;
+    }
+    .back{
+        width: 200vw;
+        left: 0;
+        right: -50vw;
+    }
+    header{
+        display: flex;
+        width: 100vw;
+        height: 90px;
+        position: relative;
+        left: -100%;
+        animation: slide 3s 1 forwards;
+        animation-delay: 3s;
+    }
+    #logo{
+        width: auto;
+        padding-left: 20px;
+    }
+    .about{
+        width: 65%;
+        height: auto;
+        padding: 50px;
+        margin-left: 0;
     }
 }
