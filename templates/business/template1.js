@@ -11,7 +11,7 @@ let
     nav = document.getElementById("nav"),
     block1 = document.getElementsByTagName("nav")[0],
     links = document.getElementsByClassName("link-set"),
-    banner_slabs1 = document.getElementsByClassName("slab-b1"),
+    banner_slabs = document.getElementsByClassName("slab-b"),
     banner_controls1 = document.getElementsByClassName("slab-nav-g"),
     card3 = document.getElementsByClassName("card3"),
     card3_txt = document.getElementsByClassName("card3-text"),
@@ -72,33 +72,33 @@ const Switch1 = () =>{
 }
 
 const Banner1 = (index) =>{
-    for(let i = 0; i < banner_slabs1.length; i++)
+    for(let i = 0; i < banner_slabs.length; i++)
         banner_controls1[i].style.boxShadow = "rgba(149, 157, 165, 0.2) 0px 8px 24px";
 
     switch(index){
         case 0:
-            banner_slabs1[index].style.opacity = 1;
-            banner_slabs1[index].style.right = 0;
-            banner_slabs1[index+1].style.opacity = 0;
-            banner_slabs1[index+1].style.left = "150%";
-            banner_slabs1[index+2].style.opacity = 0;
-            banner_slabs1[index+2].style.left = "150%";
+            banner_slabs[index].style.opacity = 1;
+            banner_slabs[index].style.right = 0;
+            banner_slabs[index+1].style.opacity = 0;
+            banner_slabs[index+1].style.left = "150%";
+            banner_slabs[index+2].style.opacity = 0;
+            banner_slabs[index+2].style.left = "150%";
             break;
         case 1:
-            banner_slabs1[index].style.opacity = 1;
-            banner_slabs1[index].style.left = 0;
-            banner_slabs1[index+1].style.opacity = 0;
-            banner_slabs1[index+1].style.left = "150%";
-            banner_slabs1[index-1].style.opacity = 0;
-            banner_slabs1[index-1].style.right = "150%";
+            banner_slabs[index].style.opacity = 1;
+            banner_slabs[index].style.left = 0;
+            banner_slabs[index+1].style.opacity = 0;
+            banner_slabs[index+1].style.left = "150%";
+            banner_slabs[index-1].style.opacity = 0;
+            banner_slabs[index-1].style.right = "150%";
             break;
         case 2:
-            banner_slabs1[index].style.opacity = 1;
-            banner_slabs1[index].style.left = 0;
-            banner_slabs1[index-1].style.opacity = 0;
-            banner_slabs1[index-1].style.right = "150%";
-            banner_slabs1[index-2].style.opacity = 0;
-            banner_slabs1[index-2].style.right = "150%";
+            banner_slabs[index].style.opacity = 1;
+            banner_slabs[index].style.left = 0;
+            banner_slabs[index-1].style.opacity = 0;
+            banner_slabs[index-1].style.right = "150%";
+            banner_slabs[index-2].style.opacity = 0;
+            banner_slabs[index-2].style.right = "150%";
             break;
     }
     banner_controls1[index].style.boxShadow = "rgba(0, 0, 0, 0.35) 0px 5px 15px";

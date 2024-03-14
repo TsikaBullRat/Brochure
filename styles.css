@@ -200,6 +200,9 @@ iframe{
     animation: left 1.5s 3s 1 forwards;
     left: -100%;
 }
+#description{
+    font-family: 'Rokkitt', serif;
+}
 
 /*Animation*/
 @keyframes slide {
